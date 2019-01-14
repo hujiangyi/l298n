@@ -1,17 +1,21 @@
 {
-  "name": "led",
-  "version": "1.0.0",
-  "description": "",
-  "main": "led.js",
+  "name": "rpio-l298n",
+  "version": "0.0.1",
+  "description": "Module to control an l298n motor controller on a Pi,dependencies rpio.",
+  "main": "l298n.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jay Hu",
   "license": "ISC",
   "dependencies": {
-    "motor-l298n": "0.0.1",
     "readline": "^1.3.0",
-    "rpio": "^1.0.11",
-    "rpio2": "^0.4.1"
-  }
+    "rpio": "^1.0.11"
+  },
+  "keywords": [
+    "l298n",
+    "motor",
+    "node.js",
+    "raspberry pi"
+  ]
 }

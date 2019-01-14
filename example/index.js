@@ -1,7 +1,7 @@
 const readline = require('readline');
-const l298n = require('./l298n.js');
+const L298N = require('../l298n.js');
 
-l298n.setup(12,13,15,null,null,null);
+let l298n = new L298N(12,13,15,null,null,null);
 l298n.setSpeed(l298n.NO1,20);
 
 const rl = readline.createInterface({

@@ -1,5 +1,7 @@
 const PinPWM = require('./PinPWM.js');
 const PinWrite = require('./PinWrite.js');
+const PinRead = require('./PinRead.js');
+
 const clock = 2048;
 const range = 100;
 
@@ -31,26 +33,32 @@ function in2Port(dNum) {
     return deviceList[dNum].in2Gpio;
 }
 
-exports.setup = function(enableA,in1,in2,enableB,in3,in4) {
+function L298N(enableA,in1,in2,enableB,in3,in4) {
     if (enableA !== null) {
         initDevice(this.NO1,enableA,in1,in2);
     }
     if (enableB !== null) {
         initDevice(this.NO2,enableB,in3,in4);
     }
-};
-exports.setSpeed = function(dNum, speed) {
-    enPort(dNum).setData(speed);
-};
-exports.forward = function(dNum) {
-    in1Port(dNum).HIGH();
-    in2Port(dNum).LOW();
-};
-exports.backward = function(dNum) {
-    in1Port(dNum).LOW();
-    in2Port(dNum).HIGH();
-};
-exports.stop = function(dNum) {
-    in1Port(dNum).LOW();
-    in2Port(dNum).LOW();
-};
+}
+Object.assign(L298N.prototype, {
+    setSpeed : function(dNum, speed) {
+        enPort(dNum).setData(speed);
+    },
+    forward : function(dNum) {
+        in1Port(dNum).HIGH();
+        in2Port(dNum).LOW();
+    },
+    backward : function(dNum) {
+        in1Port(dNum).LOW();
+        in2Port(dNum).HIGH();
+    },
+    stop : function(dNum) {
+        in1Port(dNum).LOW();
+        in2Port(dNum).LOW();
+    },
+    PinPWM : PinPWM,
+    PinWrite : PinWrite,
+    PinRead : PinRead,
+});
+module.exports = L298N;
