@@ -1,6 +1,6 @@
 const PinPWM = require('./PinPWM.js');
 const PinWrite = require('./PinWrite.js');
-const clock = 1920;
+const clock = 44;
 const range = 100;
 
 exports.NO1 = 0;
