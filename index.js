@@ -1,8 +1,8 @@
 const readline = require('readline');
 const l298n = require('./l298n.js');
 
-l298n.setup(11,13,15,null,null,null);
-l298n.setSpeed(l298n.LEFT,60);
+l298n.setup(12,13,15,null,null,null);
+l298n.setSpeed(l298n.NO1,20);
 
 const rl = readline.createInterface({
 	    input: process.stdin,
@@ -11,20 +11,19 @@ const rl = readline.createInterface({
 rl.on('line', function (input) {
     if (input === 'quit()') {
         rl.close();
-        return
     } else if (input === 'f') {
-	l298n.forward(l298n.LEFT);
+	    l298n.forward(l298n.NO1);
     } else if (input === 'b') {
-	l298n.backward(l298n.LEFT)
+	    l298n.backward(l298n.NO1)
     } else if (input === 't') {
-	l298n.stop(l298n.LEFT);
+	    l298n.stop(l298n.NO1);
     } else {
-	l298n.setSpeed(l298n.LEFT,parseint(input));
+	    l298n.setSpeed(l298n.NO1,parseint(input));
     }
 });
 
 process.on("SIGINT", function(){
-    l298n.stop(l298n.LEFT);
+    l298n.stop(l298n.NO1);
     console.log('shutdown!');
     process.exit(0);
 });
