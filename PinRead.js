@@ -4,13 +4,13 @@ function PinRead(pin) {
     this.pin = pin;
     rpio.open(pin,rpio.INPUT,rpio.LOW);
 }
-Object.assign(PinPWM.prototype, {
+Object.assign(PinRead.prototype, {
     value : function () {
         return rpio.read(this.args.pin);
     }
 });
 
-Object.defineProperty(PinPWM.prototype, 'pin', {
+Object.defineProperty(PinRead.prototype, 'pin', {
     get: function(){
         return this.pin ;
     },

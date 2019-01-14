@@ -4,7 +4,7 @@ function PinWrite(pin) {
     this.pin = pin;
     rpio.open(pin,rpio.OUTPUT,rpio.LOW);
 }
-Object.assign(PinPWM.prototype, {
+Object.assign(PinWrite.prototype, {
     HIGH : function () {
         rpio.write(this.args.pin, rpio.HIGH);
     },
@@ -16,7 +16,7 @@ Object.assign(PinPWM.prototype, {
     },
 });
 
-Object.defineProperty(PinPWM.prototype, 'pin', {
+Object.defineProperty(PinWrite.prototype, 'pin', {
     get: function(){
         return this.pin ;
     },
