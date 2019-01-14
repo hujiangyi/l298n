@@ -15,13 +15,4 @@ Object.assign(PinWrite.prototype, {
         return rpio.read(this.args.pin);
     },
 });
-
-Object.defineProperty(PinWrite.prototype, 'pin', {
-    get: function(){
-        return this.pin ;
-    },
-    set: function(value){
-        this.pin = value;
-    }
-});
-exports = PinWrite;
+module.exports = PinWrite;

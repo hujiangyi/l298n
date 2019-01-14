@@ -9,13 +9,4 @@ Object.assign(PinRead.prototype, {
         return rpio.read(this.args.pin);
     }
 });
-
-Object.defineProperty(PinRead.prototype, 'pin', {
-    get: function(){
-        return this.pin ;
-    },
-    set: function(value){
-        this.pin = value;
-    }
-});
-exports = PinRead;
+module.exports = PinRead;

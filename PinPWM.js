@@ -13,31 +13,4 @@ Object.assign(PinPWM.prototype, {
         rpio.pwmSetData(this.pin, data);
     }
 });
-
-Object.defineProperty(PinPWM.prototype, 'pin', {
-    get: function(){
-        return this.pin ;
-    },
-    set: function(value){
-        this.pin = value;
-    }
-});
-
-Object.defineProperty(PinPWM.prototype, 'clock', {
-    get: function(){
-        return this.clock ;
-    },
-    set: function(value){
-        this.clock = value;
-    }
-});
-
-Object.defineProperty(PinPWM.prototype, 'range', {
-    get: function(){
-        return this.range ;
-    },
-    set: function(value){
-        this.range = value;
-    }
-});
-exports = PinPWM;
+module.exports = PinPWM;
