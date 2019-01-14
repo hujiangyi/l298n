@@ -18,7 +18,7 @@ rl.on('line', function (input) {
     } else if (input === 't') {
 	    l298n.stop(l298n.NO1);
     } else {
-	    l298n.setSpeed(l298n.NO1,parseint(input));
+	    l298n.setSpeed(l298n.NO1,parseInt(input));
     }
 });
 
