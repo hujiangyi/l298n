@@ -13,9 +13,9 @@ function initDevice(dNum,en,in1,in2) {
         en:en,
         in1:in1,
         in2:in2,
-        enGpio : PinPWM.init(en,clock,range),
-        in1Gpio : PinWrite.init(in1),
-        in2Gpio : PinWrite.init(in2),
+        enGpio : new PinPWM(en,clock,range),
+        in1Gpio : new PinWrite(in1),
+        in2Gpio : new PinWrite(in2),
     };
 }
 
