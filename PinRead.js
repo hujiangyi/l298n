@@ -6,7 +6,7 @@ function PinRead(pin) {
 }
 Object.assign(PinRead.prototype, {
     value : function () {
-        return rpio.read(this.args.pin);
+        return rpio.read(this.pin);
     }
 });
 module.exports = PinRead;

@@ -6,13 +6,13 @@ function PinWrite(pin) {
 }
 Object.assign(PinWrite.prototype, {
     HIGH : function () {
-        rpio.write(this.args.pin, rpio.HIGH);
+        rpio.write(this.pin, rpio.HIGH);
     },
     LOW : function () {
-        rpio.write(this.args.pin, rpio.LOW);
+        rpio.write(this.pin, rpio.LOW);
     },
     value : function () {
-        return rpio.read(this.args.pin);
+        return rpio.read(this.pin);
     },
 });
 module.exports = PinWrite;
