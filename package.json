@@ -31,38 +31,16 @@
   "bugs": {
     "url": "https://github.com/hujiangyi/l298n/issues"
   },
-  "homepage": "https://github.com/WiringPi/WiringPi-Node#readme",
-  "_id": "wiring-pi@2.2.1",
-  "_shasum": "cf91731fd010bfc8594889064c4f0e9374e8ddd4",
-  "_from": "wiring-pi@*",
-  "_npmVersion": "3.10.8",
-  "_nodeVersion": "6.9.1",
+  "homepage": "https://github.com/hujiangyi/l298n/blob/master/README.md",
+  "_id": "rpio-l298n@0.0.2",
   "_npmUser": {
-    "name": "eugeneware",
-    "email": "eugene@noblesamurai.com"
-  },
-  "dist": {
-    "shasum": "cf91731fd010bfc8594889064c4f0e9374e8ddd4",
-    "tarball": "https://registry.npmjs.org/wiring-pi/-/wiring-pi-2.2.1.tgz"
+    "name": "hujiangyi003",
+    "email": "laolang@189.cn"
   },
   "maintainers": [
     {
-      "name": "nharbour",
-      "email": "eugene@noblesamurai.com"
-    },
-    {
-      "name": "eugeneware",
-      "email": "eugene@noblesamurai.com"
-    },
-    {
-      "name": "leandregohy",
-      "email": "leandre.gohy@hexeo.be"
+      "name": "Jay Hu",
+      "email": "laolang@189.cn"
     }
-  ],
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/wiring-pi-2.2.1.tgz_1478868736460_0.390368279768154"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/wiring-pi/-/wiring-pi-2.2.1.tgz"
+  ]
 }
